@@ -1,0 +1,137 @@
+%------------------------
+% Muhammad Mustafa Raza
+% Author; Muhammad 
+% License: CC-BY-4.0
+%------------------------
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{fontawesome5}
+\usepackage{ragged2e}
+\usepackage{etoolbox}
+\usepackage{tikz}
+\input{glyphtounicode}
+
+% font options
+\usepackage{newpxtext}
+\linespread{1.05}  % palladio needs more leading (space between lines)
+\usepackage[T1]{fontenc}
+
+\pagestyle{fancy}
+\fancyhf{}  % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+\setlength{\footskip}{5pt}
+
+% sections formatting
+\titleformat{\section}{
+  \vspace{-2pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule\vspace{-5pt}]
+
+% ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+% custom commands
+\newcommand{\cvitem}[1]{
+  \item\small{
+    {#1\vspace{-2pt}}
+  }
+}
+
+\newcommand{\cvheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \small#3 & \small #4 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\cvheadingstart}{\begin{itemize}[leftmargin=0in, label={}]}
+\newcommand{\cvheadingend}{\end{itemize}}
+\newcommand{\cvitemstart}{\begin{itemize}[label=\textopenbullet]\justifying}
+\newcommand{\cvitemend}{\end{itemize}\vspace{-5pt}}
+
+\newcommand{\cvskill}[2]{
+  \textcolor{black}{\textbf{#1}}\hfill
+  \foreach \x in {1,...,5}{%
+    \space{\ifnumgreater{\x}{#2}{\color{black!80!white!20}}{\color{black}}\faSquare}}\par%
+  \vspace{-2pt}
+}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\footnotesize$\bullet$}}$}
+
+\begin{document}
+
+% contact information
+\begin{center}
+  \textbf{\LARGE\scshape Muhammad Mustafa Raza} \\
+  \vspace{1pt}\small
+  \href{mailto:}{mustafaraza6619@gmail.com }
+  $\ \diamond\ $ 
+  +4917626695570
+  
+  
+\end{center}
+
+\section{Professional Experience}
+\cvheadingstart
+  \cvheading
+    {Universal Enterprises}{Karachi, Pakistan}
+    {Business Manager}{09/2023 - 08/2024}
+  \cvitemstart
+     \cvitem{As a student, I assisted with daily operations, including inventory control, shipping logistics, and customer relations.}
+  \cvitemend
+\section{Education}
+\cvheadingstart
+  \cvheading
+    { Gisma University}{Berlin, Germany}
+    {Bsc Computer Science, IT}{10/2024 - present}
+  \cvheading
+  {Bahria College Karsaz}{karachi, pakistan}
+     {High School, Science}{07/2021 - 07/2023}
+\cvheadingend
+
+\section{Technical Skills}
+\cvskill{Time Management}{4}
+\cvskill{Team Collaboration}{3}
+\cvskill{Process Omptimization}{3}
+\cvskill{Data Entry}{2}
+\vspace{-5pt}
+
+\section{Language and Certification}
+\cvheadingstart
+\item
+\cvitemstart
+  \cvitem{Urdu-Mother Tongue}
+  \cvitem{English-Fluent}
+  \cvitem{International Driving Permit}
+  \cvitem{DatabAnalytics with AI}
+\cvitemend
+\cvheadingend
+
+\end{document}
+
